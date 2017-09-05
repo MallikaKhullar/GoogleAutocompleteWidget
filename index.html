@@ -45,7 +45,6 @@
                 source: function(request, response) {
                     $.getJSON("https://suggestqueries.google.com/complete/search?callback=?", {
                         "hl": "en", // Language
-                        "ds": "yt", // Restrict lookup to youtube
                         "jsonp": "suggestCallBack", // jsonp callback function name
                         "q": request.term, // query term
                         "client": "youtube" // force youtube style response, i.e. jsonp
