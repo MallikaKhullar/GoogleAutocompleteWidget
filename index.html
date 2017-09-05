@@ -50,14 +50,12 @@
                         "client": "youtube" // force youtube style response, i.e. jsonp
                     });
                     suggestCallBack = function(data) {
-                        console.log(JSON.stringify(data[1]));
                         var suggestions = [];
                         $.each(data[1], function(key, val) {
                             suggestions.push({
                                 "value": val[0]
                             });
                         });
-                        console.log(JSON.stringify(suggestions));
                         suggestions.length = Math.min(suggestions.length, 5); // prune suggestions list to only 5 items
                         response(suggestions);
                     };
